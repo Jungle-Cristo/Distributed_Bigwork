@@ -295,49 +295,49 @@ onUnmounted(() => {
 .chat-layout {
   display: flex;
   height: 100vh;
-  background: var(--bg-secondary);
+  background: var(--apple-gray-ultra-light);
 }
 
 .sidebar {
   width: 360px;
-  background: var(--bg-primary);
+  background: var(--apple-white);
   display: flex;
   flex-direction: column;
-  border-right: 1px solid var(--border-light);
-  box-shadow: var(--shadow-sm);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: var(--apple-shadow-sm);
 }
 
 .sidebar-header {
-  padding: 20px 24px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  padding: 24px;
+  background: var(--apple-gray-ultra-light);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .user-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .user-avatar {
   width: 48px;
   height: 48px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--apple-radius-md);
+  background: linear-gradient(135deg, var(--apple-blue), #5856d6);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  font-weight: 600;
-  backdrop-filter: blur(10px);
+  font-weight: 500;
+  color: white;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: all var(--apple-transition-fast);
 }
 
 .user-avatar:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 .user-avatar .avatar-img {
@@ -352,22 +352,23 @@ onUnmounted(() => {
 }
 
 .nickname {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
+  color: var(--apple-text-primary);
 }
 
 .status-indicator {
   display: flex;
   align-items: center;
   font-size: 12px;
-  opacity: 0.9;
+  color: var(--apple-text-secondary);
 }
 
 .status-dot {
   width: 8px;
   height: 8px;
-  background: #22c55e;
+  background: var(--apple-success);
   border-radius: 50%;
   margin-right: 6px;
   animation: pulse 2s ease-in-out infinite;
@@ -380,55 +381,57 @@ onUnmounted(() => {
   }
   50% {
     opacity: 0.5;
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 }
 
 .dropdown-trigger {
   padding: 8px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.15);
-  transition: all 0.3s ease;
+  border-radius: var(--apple-radius-sm);
+  background: rgba(0, 0, 0, 0.04);
+  transition: all var(--apple-transition-fast);
   cursor: pointer;
+  color: var(--apple-text-secondary);
 }
 
 .dropdown-trigger:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--apple-text-primary);
 }
 
 .header-actions {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
 .action-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.15);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--apple-radius-md);
+  background: rgba(0, 0, 0, 0.04);
   border: none;
-  color: white;
+  color: var(--apple-text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all var(--apple-transition-fast);
 }
 
 .action-btn:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
+  background: rgba(0, 0, 0, 0.08);
+  transform: scale(1.05);
 }
 
 .action-btn:active {
-  transform: translateY(0);
+  transform: scale(0.95);
 }
 
 .chat-area {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: var(--bg-secondary);
+  background: var(--apple-gray-light);
 }
 
 .no-chat {
@@ -437,16 +440,14 @@ onUnmounted(() => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--text-muted);
-  gap: 20px;
-  font-size: 16px;
+  gap: 24px;
 }
 
 .no-chat-icon {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+  width: 100px;
+  height: 100px;
+  border-radius: var(--apple-radius-xl);
+  background: linear-gradient(135deg, rgba(0, 113, 227, 0.08), rgba(88, 86, 214, 0.08));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -458,20 +459,20 @@ onUnmounted(() => {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 }
 
 .no-chat-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 4px;
+  color: var(--apple-text-primary);
+  margin-bottom: 6px;
 }
 
 .no-chat-subtitle {
-  font-size: 14px;
-  color: var(--text-muted);
+  font-size: 15px;
+  color: var(--apple-text-secondary);
 }
 
 .request-item {
@@ -479,12 +480,12 @@ onUnmounted(() => {
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
-  border-bottom: 1px solid var(--border-light);
-  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition: background var(--apple-transition-fast);
 }
 
 .request-item:hover {
-  background: var(--bg-secondary);
+  background: var(--apple-gray-light);
 }
 
 .request-info {
@@ -496,23 +497,23 @@ onUnmounted(() => {
 .request-avatar {
   width: 44px;
   height: 44px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: var(--apple-radius-md);
+  background: linear-gradient(135deg, var(--apple-blue), #5856d6);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .request-name {
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--apple-text-primary);
 }
 
 .request-username {
-  font-size: 12px;
-  color: var(--text-muted);
+  font-size: 13px;
+  color: var(--apple-text-secondary);
 }
 
 .request-actions {
@@ -522,15 +523,15 @@ onUnmounted(() => {
 
 .empty-center {
   text-align: center;
-  color: var(--text-muted);
-  padding: 40px 20px;
+  color: var(--apple-text-secondary);
+  padding: 48px 24px;
 }
 
 :deep(.el-dropdown-menu__item) {
-  color: var(--text-primary);
+  color: var(--apple-text-primary);
 }
 
 :deep(.el-dropdown-menu__item:hover) {
-  background: var(--bg-hover);
+  background: var(--apple-gray-light);
 }
 </style>

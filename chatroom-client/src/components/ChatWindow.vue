@@ -278,13 +278,13 @@ function generateUUID() {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: var(--bg-secondary);
+  background: var(--apple-gray-light);
 }
 
 .chat-header {
   padding: 20px 24px;
-  background: var(--bg-primary);
-  border-bottom: 1px solid var(--border-light);
+  background: var(--apple-white);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -299,9 +299,9 @@ function generateUUID() {
 .chat-avatar {
   width: 44px;
   height: 44px;
-  border-radius: 12px;
+  border-radius: var(--apple-radius-md);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .chat-title-wrap {
@@ -312,12 +312,12 @@ function generateUUID() {
 .chat-title {
   font-size: 17px;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--apple-text-primary);
 }
 
 .chat-subtitle {
   font-size: 13px;
-  color: var(--text-muted);
+  color: var(--apple-text-secondary);
   margin-top: 2px;
 }
 
@@ -329,20 +329,20 @@ function generateUUID() {
 .header-action-btn {
   width: 40px;
   height: 40px;
-  border-radius: 10px;
-  background: var(--bg-secondary);
+  border-radius: var(--apple-radius-md);
+  background: var(--apple-gray-light);
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-secondary);
+  color: var(--apple-text-primary);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--apple-transition-fast);
 }
 
 .header-action-btn:hover {
-  background: var(--bg-hover);
-  color: var(--primary-color);
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--apple-blue);
 }
 
 .active-mode-toggle {
@@ -379,16 +379,16 @@ function generateUUID() {
   flex: 1;
   overflow-y: auto;
   padding: 24px;
-  background: linear-gradient(180deg, var(--bg-secondary) 0%, rgba(99, 102, 241, 0.03) 100%);
+  background: var(--apple-gray-light);
 }
 
 .chat-messages::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
 }
 
 .chat-messages::-webkit-scrollbar-thumb {
-  background: var(--text-muted);
-  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--apple-radius-full);
 }
 
 .reply-bar {
@@ -396,9 +396,9 @@ function generateUUID() {
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
-  background: linear-gradient(90deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.08));
-  border-top: 1px solid var(--border-light);
-  border-bottom: 1px solid var(--border-light);
+  background: rgba(0, 113, 227, 0.06);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .reply-content {
@@ -406,15 +406,15 @@ function generateUUID() {
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  color: var(--text-secondary);
+  color: var(--apple-text-secondary);
 }
 
 .reply-avatar {
   width: 28px;
   height: 28px;
-  border-radius: 8px;
+  border-radius: var(--apple-radius-sm);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .reply-text {
@@ -425,15 +425,15 @@ function generateUUID() {
 }
 
 .reply-name {
-  color: var(--primary-color);
+  color: var(--apple-blue);
   font-weight: 500;
 }
 
 .reply-close {
   padding: 6px;
-  border-radius: 8px;
+  border-radius: var(--apple-radius-sm);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--apple-transition-fast);
 }
 
 .reply-close:hover {
@@ -443,8 +443,8 @@ function generateUUID() {
 .chat-input {
   display: flex;
   padding: 16px 24px;
-  background: var(--bg-primary);
-  border-top: 1px solid var(--border-light);
+  background: var(--apple-white);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   gap: 12px;
   align-items: flex-end;
 }
@@ -458,20 +458,20 @@ function generateUUID() {
 .tool-btn {
   width: 40px;
   height: 40px;
-  border-radius: 10px;
-  background: var(--bg-secondary);
+  border-radius: var(--apple-radius-md);
+  background: var(--apple-gray-light);
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-secondary);
+  color: var(--apple-text-primary);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--apple-transition-fast);
 }
 
 .tool-btn:hover {
-  background: var(--bg-hover);
-  color: var(--primary-color);
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--apple-blue);
 }
 
 .input-area {
@@ -479,8 +479,8 @@ function generateUUID() {
 }
 
 .input-area :deep(.el-textarea__wrapper) {
-  border-radius: 16px;
-  background: var(--bg-secondary);
+  border-radius: var(--apple-radius-lg);
+  background: var(--apple-gray-light);
   border: none;
   box-shadow: none;
   padding: 12px 16px;
@@ -495,8 +495,8 @@ function generateUUID() {
 
 .send-btn {
   height: 44px;
-  border-radius: 12px;
-  font-weight: 600;
+  border-radius: var(--apple-radius-md);
+  font-weight: 500;
   padding: 0 24px;
 }
 
@@ -507,7 +507,7 @@ function generateUUID() {
 
 .loading-hint {
   text-align: center;
-  color: var(--text-muted);
+  color: var(--apple-text-secondary);
   padding: 40px;
 }
 
@@ -515,8 +515,8 @@ function generateUUID() {
   width: 40px;
   height: 40px;
   margin: 0 auto 12px;
-  border: 3px solid var(--border-light);
-  border-top-color: var(--primary-color);
+  border: 3px solid rgba(0, 0, 0, 0.08);
+  border-top-color: var(--apple-blue);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
